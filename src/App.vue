@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="font-Inter bg-gray-100 md:h-screen h-full md:p-4 p-4">
+    <h1 class="text-2xl font-semibold py-3">Products</h1>
+    <div class="px-4 md:px-10 md:py-5 bg-white rounded">
+      <ProductCard :productsData="products" />
+    </div>
+    <Pagination />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import ProductsData from "@/services/ProductsData.json";
+import ProductCard from "@/components/ProductCard.vue";
+import DownArrow from "@/components/svg/DownArrow.vue";
+import Pagination from "@/components/Pagination.vue";
 
-export default {
-  name: 'App',
+@Component({
   components: {
-    HelloWorld
+    ProductCard,
+    DownArrow,
+    Pagination
   }
+})
+export default class App extends Vue {
+  products = ProductsData;
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
