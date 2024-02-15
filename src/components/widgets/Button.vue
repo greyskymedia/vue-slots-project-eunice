@@ -21,7 +21,7 @@
     @Prop({ type: Boolean, default: false }) readonly disabled!: boolean;
   @Prop({ type: String, default: "" }) readonly buttonCss!: string;
   
-    defaultButtonClasses = "text-white bg-indigo-500 font-medium rounded text-sm px-5 h-10 text-center";
+    defaultButtonClasses = "text-white bg-indigo-500 md:font-medium font-xs rounded text-sm px-5 h-10 text-center";
   
     get buttonClasses() {
         return `${this.defaultButtonClasses} ${this.buttonCss}`;

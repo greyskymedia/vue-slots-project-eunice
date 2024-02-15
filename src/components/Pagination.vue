@@ -6,9 +6,14 @@
   </div>
 </template>
 <script lang="ts">
-import {Vue, Component} from "vue-property-decorator"
+import {Vue, Component} from "vue-property-decorator";
+import DownArrow from "@/components/svg/DownArrow.vue";
 
-@Component
+@Component({
+  components:{
+    DownArrow
+  }
+})
 export default class Pagination extends Vue {
     
 }
