@@ -1,7 +1,7 @@
 <template>
   <div class="md:flex gap-8 py-4">
     <div class="flex gap-1">
-      <FormInput placeholder="Find a Product" @input="onSearchInput" :inputCss="'w-64'" />
+      <FormInput placeholder="Find a Product" @input="onSearchInput" />
       <Button buttonText="Search" buttonCss="mt-1 bg-customBlue" @click="search" />
     </div>
     <div class="flex gap-1">
