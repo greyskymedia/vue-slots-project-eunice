@@ -34,7 +34,7 @@
     @Prop({ type: Boolean, default: false }) readonly required!: boolean;
     @Prop({ type: String, default: "" }) readonly InputCss!: string;
   
-    defaultInputClasses = "form-input md:w-60 w-48 h-10 border mt-1 rounded-md px-4 bg-gray-50 bg-white w-auto block";
+    defaultInputClasses = "form-input md:w-60 w-40 h-10 border mt-1 rounded-md px-4 bg-gray-50 bg-white w-auto block";
   
     get inputClasses() {
       return `${this.defaultInputClasses} ${this.InputCss}`;

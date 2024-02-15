@@ -1,5 +1,5 @@
 <template>
-    <div class="md:flex gap-2 py-4">
+    <div class="md:flex gap-8 py-4">
       <div v-for="(buttonData, index) in buttonDataArray" :key="index" >
         <div class="flex gap-1">
         <FormInput :placeholder="buttonData.placeholder"/>
@@ -22,8 +22,8 @@
   })
   export default class SearchBar extends Vue {
     buttonDataArray = [
-      { placeholder: "Find a Product",  buttonText: "Search", buttonCss: "mt-1 bg-blue" },
-      { placeholder: "Product Name",  buttonText: "Add Product", inputCss:"w-48 h-10", buttonCss: "mt-1 bg-green" }
+      { placeholder: "Find a Product",  buttonText: "Search", buttonCss: "mt-1 bg-customBlue" },
+      { placeholder: "Product Name",  buttonText: "Add Product", inputCss:"w-48 h-10", buttonCss: "mt-1 bg-customGreen" }
     ];
   }
   </script>
